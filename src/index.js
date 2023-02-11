@@ -9,9 +9,11 @@ const textCount = data.text.length;
 const textPortrait = document.getElementById('text');
 
 const title = document.createElement('title');
-title.innerHTML = `${data.name} | CSS Text Portrait`;
+title.innerHTML = `${data.name} | I Love You Always`;
 
 document.head.appendChild(title);
+
+
 
 const setText = () => {
   const maxChar = computeMaxChar();
@@ -21,6 +23,8 @@ const setText = () => {
     .repeat(Math.ceil(maxChar / textCount))
     .substring(0, maxChar + 1);
 };
+
+document.body.appendChild(text);
 
 window.addEventListener('load', setText);
 
